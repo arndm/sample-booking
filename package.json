@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "description": "Pre assignment finnair",
   "scripts": {
-    "pretest": "eslint --ignore-path .gitignore */**/*.js",
+    "pretest": "eslint --ignore-path .gitignore src/**/*.js",
+    "testmap": "node src/tools/mapper.js",
     "start": "node src/server.js"
   },
   "dependencies": {
-    "loglevel": "^1.6.1",
     "moment-timezone": "^0.5.23",
     "mongo-mock": "^3.3.2"
   },
