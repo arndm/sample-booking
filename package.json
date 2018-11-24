@@ -1,0 +1,28 @@
+{
+  "name": "booking-data-api",
+  "version": "0.0.1",
+  "description": "Pre assignment finnair",
+  "scripts": {
+    "pretest": "eslint --ignore-path .gitignore */**/*.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "loglevel": "^1.6.1",
+    "moment-timezone": "^0.5.23",
+    "mongo-mock": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.9.0",
+    "mocha": "^4.1.0",
+    "nock": "^10.0.2",
+    "nyc": "^12.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Arindam",
+  "license": "none",
+  "homepage": "#readme"
+}

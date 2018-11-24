@@ -1,0 +1,17 @@
+{
+  "bookingId" : "Booking2",
+  "passengerDetails" : {
+    "passengerId" : "Passenger2",
+    "firstName" : "Tom",
+    "lastName" : "Hanks",
+    "emailId" : "tom.hanks@sample.com"
+  },
+  "flights" : [
+    {
+       "departure": "HEL",
+       "arrival": "CDG",
+       "departureDate": "20181120",
+       "arrivalDate": "20181120"
+    }
+  ]
+}
