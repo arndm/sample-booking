@@ -26,7 +26,7 @@ const fetchBookingList = function(passengerId) {
                     passengerId: passengerId
                 }).toArray(function(err, doc) {
                     if (err) reject(`Error caught in fetchBookingList: ${err}`);
-                    log.debug('fetch booking list Result:', doc);
+                    //log.debug('fetch booking list Result:', doc);
                     let cleanup = () => {
                         let state = collection.toJSON();
                         state.documents.length = 0;
@@ -52,7 +52,7 @@ const fetchBookingDetail = function(bookingId) {
                     _id: bookingId
                 }, function(err, doc) {
                     if (err) reject("Error caught in fetchBookingList", err);
-                    log.debug('fetch booking detail result:', doc);
+                    //log.debug('fetch booking detail result:', doc);
                     let cleanup = () => {
                         let state = collection.toJSON();
                         state.documents.length = 0;
@@ -79,7 +79,7 @@ const putItem = function(data) {
                 collection.insertMany(data, function(err, result) {
                     if (err) reject(`Some database errors: ${err}`);
                     db.close();
-                    log.debug("put item result",result);
+                    //log.debug("put item result",result);
                     resolve(collection);
                 });
             });
@@ -97,7 +97,7 @@ const getSamples = function() {
 
         return dataDump;
     } catch (err) {
-        log.info("Error in loading samples", err);
+        log.error("Error in loading samples", err);
         return err;
     }
 };

@@ -1,26 +1,29 @@
 {
   "name": "booking-data-api",
   "version": "0.0.1",
-  "description": "Pre assignment finnair",
+  "description": "Pre assignment",
   "scripts": {
-    "pretest": "eslint --ignore-path .gitignore */**/*.js",
-    "start": "node src/server.js"
+    "syntax-test": "eslint --ignore-path .gitignore */**/*.js",
+    "test": "nyc mocha test/*.js",
+    "start": "node server.js"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "loglevel": "^1.6.1",
     "moment-timezone": "^0.5.23",
     "mongo-mock": "^3.3.2"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "mocha": "^4.1.0",
     "nock": "^10.0.2",
-    "nyc": "^12.0.2"
+    "nyc": "^12.0.2",
+    "supertest": "^3.3.0"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/arndm/sample-booking"
   },
   "author": "Arindam",
   "license": "none",
