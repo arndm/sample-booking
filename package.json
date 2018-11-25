@@ -1,7 +1,7 @@
 {
   "name": "booking-data-api",
   "version": "0.0.1",
-  "description": "Pre assignment finnair",
+  "description": "Pre assignment",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore src/**/*.js",
     "testmap": "node src/tools/mapper.js",
