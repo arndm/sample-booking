@@ -44,18 +44,34 @@ module.exports = {
                     "email": "john.doe@sample.com"
                   },
                   "flights": [
-                    {
-                      "departure": "HEL",
-                      "arrival": "ARN",
-                      "departureDate": "20181119",
-                      "arrivalDate": "20181119"
-                    },
-                    {
-                      "departure": "ARN",
-                      "arrival": "DEL",
-                      "departureDate": "20181119",
-                      "arrivalDate": "20181120"
-                    }
+                    [
+                      {
+                        "departure": "HEL",
+                        "arrival": "ARN",
+                        "departureDate": "20181119",
+                        "arrivalDate": "20181119"
+                      },
+                      {
+                        "departure": "ARN",
+                        "arrival": "DEL",
+                        "departureDate": "20181119",
+                        "arrivalDate": "20181120"
+                      }
+                    ],
+                    [
+                      {
+                        "departure": "DEL",
+                        "arrival": "ARN",
+                        "departureDate": "20181120",
+                        "arrivalDate": "20181120"
+                      },
+                      {
+                        "departure": "ARN",
+                        "arrival": "HEL",
+                        "departureDate": "20181120",
+                        "arrivalDate": "20181121"
+                      }
+                    ]
                   ]
                 }
               },
@@ -70,12 +86,14 @@ module.exports = {
                     "email": "tom.hanks@sample.com"
                   },
                   "flights": [
-                    {
-                      "departure": "HEL",
-                      "arrival": "CDG",
-                      "departureDate": "20181120",
-                      "arrivalDate": "20181120"
-                    }
+                    [
+                      {
+                        "departure": "HEL",
+                        "arrival": "CDG",
+                        "departureDate": "20181120",
+                        "arrivalDate": "20181120"
+                      }
+                    ]
                   ]
                 }
               },
@@ -90,12 +108,14 @@ module.exports = {
                     "email": "john.doe@sample.com"
                   },
                   "flights": [
-                    {
-                      "departure": "CDG",
-                      "arrival": "IVL",
-                      "departureDate": "20181124",
-                      "arrivalDate": "20181124"
-                    }
+                    [
+                      {
+                        "departure": "CDG",
+                        "arrival": "IVL",
+                        "departureDate": "20181124",
+                        "arrivalDate": "20181124"
+                      }
+                    ]
                   ]
                 }
               }

@@ -7,6 +7,7 @@
     "emailId" : "john.doe@sample.com"
   },
   "flights" : [
+    [
     {
        "departure": "CDG",
        "arrival": "IVL",
@@ -14,4 +15,5 @@
        "arrivalDate": "20181124"
     }
   ]
+]
 }

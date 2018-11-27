@@ -27,6 +27,7 @@ router.get('/bookings/:bookingid', async function(req, res, next) {
 
 
 let mapper = (rawBooking) => {
+  log.debug("flights for booking details",JSON.stringify(rawBooking.bookingData.flights));
 
     return {
         id: rawBooking._id,
@@ -35,9 +36,32 @@ let mapper = (rawBooking) => {
             lastName: rawBooking.bookingData.passenger.lastName,
             email: rawBooking.bookingData.passenger.email
         },
-        flights: rawBooking.bookingData.flights
+        flights: mapFlightDetails(rawBooking.bookingData.flights)
     };
 
 };
+
+let mapFlightDetails = (flights) => {
+
+    const seg = flights.map(leg => {
+
+        let lastFlight = leg[leg.length - 1];
+        let firstFlight = leg[0];
+        log.debug("firstFlight", firstFlight);
+        log.debug("lastFlight", firstFlight);
+
+        let newLeg = {
+            departure: firstFlight.departure,
+            arrival: lastFlight.arrival,
+            departureDate: firstFlight.departureDate,
+            arrivalDate: lastFlight.arrivalDate
+        }
+
+        return newLeg;
+    });
+    log.debug("segment", seg);
+    
+    return seg;
+}
 
 module.exports = router;
