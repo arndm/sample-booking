@@ -38,7 +38,6 @@ let mapper = (rawBooking) => {
         },
         flights: mapFlightDetails(rawBooking.bookingData.flights)
     };
-
 };
 
 let mapFlightDetails = (flights) => {
@@ -60,7 +59,7 @@ let mapFlightDetails = (flights) => {
         return newLeg;
     });
     log.debug("segment", seg);
-    
+
     return seg;
 }
 
