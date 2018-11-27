@@ -9,7 +9,7 @@
        if(leg.departure.length!=3 || leg.arrival.length!=3)
        throw new Error(`Airport Format is not not valid for leg : ${JSON.stringify(leg)}`);
      });
-});
+ });
      return {
        _id : bookingData.bookingId,
        passengerId: bookingData.passengerDetails.passengerId,
